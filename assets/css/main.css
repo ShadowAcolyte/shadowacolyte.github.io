@@ -129,7 +129,7 @@
 
 /* Color palette */
 :root {
-  --color-ebony: #050611;
+  --color-ebony: #070918;
   --color-thatch: #b49c98;
   --color-ultramarine: #070990;
   --color-jungle-green: #23ac97;
@@ -141,18 +141,47 @@ body {
   padding: 0;
 }
 
-body #page-wrapper {
-  font-weight: bold;
-  font-size: 1.5em;
+body #page-container {
+  font-family: "Fira Code";
+  font-size: 1em;
 }
+
+#page-container p {
+  color: lime;
+  font-size: 5em;
+}
+
 .hidden {
   opacity: 0;
 }
 
 #banner {
-  background-attachment: fixed;
-  background-image: url(../../img/banner.jpg);
+  background-image: -moz-linear-gradient(
+      top,
+      rgba(84,52,26, 0.65),
+      rgba(84,52,26, 0.65)
+    ),
+    url("../../img/keyboard-screen-code.jpg");
+  background-image: -webkit-linear-gradient(
+      top,
+      rgba(84,52,26, 0.65),
+      rgba(84,52,26, 0.65)
+    ),
+    url("../../img/keyboard-screen-code.jpg");
+  background-image: -ms-linear-gradient(
+      top,
+      rgba(84,52,26, 0.65),
+      rgba(84,52,26, 0.65)
+    ),
+    url("../../img/keyboard-screen-code.jpg");
+  background-image: linear-gradient(
+      top,
+      rgba(84,52,26, 0.65),
+      rgba(84,52,26, 0.65)
+    ),
+    url("../../img/keyboard-screen-code.jpg");
   background-position: center center;
+  background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
   position: relative;
@@ -164,6 +193,16 @@ body #page-wrapper {
   display: inline-block;
   height: 100vh;
   vertical-align: middle;
+}
+
+#banner::after {
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 #banner .console-container {
@@ -178,17 +217,20 @@ body #page-wrapper {
   left: 0;
   right: 0;
   margin: auto;
+  z-index: 1;
 }
 
 #banner .console-underscore {
   display: inline-block;
   position: relative;
-  bottom: 0.15em;
-  left: -0.4em;
+  bottom: 0.1em;
+  left: -0.3em;
 }
 
-#banner h1 {
-  display: inline-block;
-  color: var(--color-thatch);
-  margin-top: 0;
+#banner img {
+    border-radius: 100%;
+    display: inline-block;
+    height: 18vw;
+    vertical-align: middle;
+    width: 18vw;
 }
