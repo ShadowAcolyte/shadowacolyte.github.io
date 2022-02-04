@@ -1,13 +1,31 @@
-setTimeout(function() {consoleText(["hello.", "i'm shadow_acolyte."])}, 1000);
+function consoleBlink() {
+  var visible = true;
+  var console = document.getElementById("console-blink");
+  window.setInterval(function () {
+    if (visible === true) {
+      console.className = "console-underscore hidden";
+      visible = false;
+    } else {
+      console.className = "console-underscore";
+
+      visible = true;
+    }
+  }, 400);
+}
 
 function consoleText(words) {
-  var visible = true;
-  var console = document.getElementById("console");
   var letter_count = 1;
   var increment = 1;
   var waiting = false;
   var target = document.getElementById("console-output");
-  var palette = ["#8be9fd", "#ff79c6", "#ffb86c", "#bd93f9", "#ff5555", "#f1fa8c"];
+  var palette = [
+    "#8be9fd",
+    "#ff79c6",
+    "#ffb86c",
+    "#bd93f9",
+    "#ff5555",
+    "#f1fa8c",
+  ];
   target.setAttribute("style", "color:" + palette[0]);
   window.setInterval(function () {
     if (letter_count === 0 && !waiting) {
@@ -35,14 +53,4 @@ function consoleText(words) {
       letter_count += increment;
     }
   }, 120);
-  window.setInterval(function () {
-    if (visible === true) {
-      console.className = "console-underscore hidden";
-      visible = false;
-    } else {
-      console.className = "console-underscore";
-
-      visible = true;
-    }
-  }, 400);
 }
