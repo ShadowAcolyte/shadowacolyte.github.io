@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <title>ShadowAcolyte's Corner</title>
   </head>
-  <body bgcolor="#ffffff">
+  <body>
     <div id="page-container">
-      <section id="banner" class="parallax" data-velocity="0.5">
+      <section id="banner" class="jarallax">
         <div class="content">
           <span class="image"
             ><a href="https://github.com/shadowacolyte"
@@ -29,29 +29,38 @@
             </div>
           </div>
         </div>
-        <a href="#about">Learn More</a>
+        <a href="#about" class="arrow-scroll dynamic"><span></span></a>
       </section>
-      <section id="about">
-        <h1>Header</h1>
-        <p>
-          lorem ipsum dolor <br />
-          more place holder text<br />
-          even more place holder text<br />
-          <br /><br /><br />
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
-          laboriosam corrupti rem excepturi aliquam quis commodi eos eaque odit
-          aperiam aliquid culpa, quasi hic fugiat animi illo, error itaque
-          tenetur.
-          <br />
-          Donec facilisis, odio vel mollis posuere, orci nulla ullamcorper dui,
-          sed dignissim est neque a lectus. In enim urna, tristique ac leo
-          vitae, fermentum lacinia turpis.
-        </p>
+      <section id="about" class="jarallax">
+        <div class="content">
+          <h1>About Me</h1>
+          <p>
+            I am a hobbyist programmer and enjoy playing games. I'm interested
+            in a lot of stuff, from
+            <span style="color: #50fa7b">graphics programming</span> and
+            <span style="color: #bd93f9">game development</span> to making
+            custom <span style="color: #ffb86c">physics engines</span> and much
+            more. I mostly code in <span style="color: #8be9fd">C++</span> but
+            frequently use <span style="color: #8be9fd">Java</span> for Android
+            games. This website is where I'll share progress on my projects and
+            talk about random stuff (mostly related to programming and gaming).
+            <br /><br />
+            If you'd like to collaborate on a project, or simply hang out and
+            play some games (Minecraft, CS:GO, or something else), feel free to
+            message me on discord: <br />
+            <a href="https://discordapp.com/users/490458548422311937"
+              >ShadowAcolyte#2725</a
+            >
+          </p>
+        </div>
+        <a href="#languages" class="arrow-scroll static"><span></span></a>
+      </section>
+      <section id ="languages">
       </section>
     </div>
 
     <script src="assets/js/jquery-3.6.0.min.js"></script>
-    <script src="assets/js/jquery.scrolly.js"></script>
+    <script src="assets/js/jarallax.min.js"></script>
     <script src="assets/js/console.js"></script>
     <script src="assets/js/main.js"></script>
   </body>

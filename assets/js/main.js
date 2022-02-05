@@ -1,17 +1,21 @@
 $(function () {
-  $(".parallax").scrolly({ bgParallax: true });
+    /* parallax effect */
+  $(".jarallax").jarallax({
+    speed: 0.5,
+  });
 
+  /* banner fade in and console text effect */
   $(window).on("load", function () {
     consoleBlink();
     $("#banner")
       .hide()
-      .fadeIn(2000, function () {
-        consoleText(["hello, world!", "i'm shadow_acolyte."]);
+      .fadeIn(3000, function () {
+        consoleText(["hello, world.", "i'm shadow_acolyte."]);
       });
   });
 
   /* smooth scrolling */
-  $("a[href]").on("click", function (e) {
+  $(".arrow-scroll").on("click", function (e) {
     e.preventDefault();
     $("html, body").animate(
       { scrollTop: $($(this).attr("href")).offset().top },
