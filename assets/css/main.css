@@ -372,6 +372,18 @@ body {
   }
 }
 
+@media only screen and (max-width: 420px) {
+    #about .content p {
+      font-size: 10pt;
+    }
+  }
+
+  @media only screen and (max-width: 260px) {
+    #about .content p {
+      font-size: 8pt;
+    }
+  }
+
 #about .content a {
   color: #ff79c6;
   text-decoration: none;
