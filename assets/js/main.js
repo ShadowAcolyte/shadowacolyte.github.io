@@ -9,9 +9,10 @@ $(function () {
     consoleBlink();
     $("#banner")
       .hide()
-      .fadeIn(3000, function () {
+      .fadeIn(3000);
+    window.setTimeout(function () {
         consoleText(["hello, world.", "i'm shadow_acolyte."]);
-      });
+      }, 1700);
   });
 
   /* smooth scrolling */
